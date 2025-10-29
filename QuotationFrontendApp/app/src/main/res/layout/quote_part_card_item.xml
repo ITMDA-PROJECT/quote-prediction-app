@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top Header: Part Description and Edit Button -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvPartDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Part Description"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnEditPart"
+                android:layout_marginEnd="8dp"/>
+
+            <ImageButton
+                android:id="@+id/btnEditPart"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Edit Part"
+                android:src="@android:drawable/ic_menu_edit"
+                app:tint="#D36319"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D36319"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Middle Body: Details in two columns -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Left Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView style="@style/CardLabel" android:text="Material Code" />
+                <TextView style="@style/CardValue" android:id="@+id/tvMaterialCode" android:text="N/A" />
+
+                <TextView style="@style/CardLabel" android:layout_marginTop="8dp" android:text="Cutting (mm)" />
+                <TextView style="@style/CardValue" android:id="@+id/tvCuttingLength" android:text="0.0" />
+            </LinearLayout>
+
+            <!-- Right Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView style="@style/CardLabel" android:text="Quantity" />
+                <TextView style="@style/CardValue" android:id="@+id/tvQuantity" android:text="0" />
+
+                <TextView style="@style/CardLabel" android:layout_marginTop="8dp" android:text="Pierces" />
+                <TextView style="@style/CardValue" android:id="@+id/tvNumPierces" android:text="0" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Bottom Body: Part Time -->
+        <TextView style="@style/CardLabel" android:layout_marginTop="8dp" android:text="Calculated Part Time (min)" />
+        <TextView style="@style/CardValue" android:id="@+id/tvPartTime" android:text="N/A" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

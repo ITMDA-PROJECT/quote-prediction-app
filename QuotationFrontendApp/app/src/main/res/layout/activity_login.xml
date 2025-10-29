@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+
+    <!-- Top Login Block -->
+    <RelativeLayout
+        android:id="@+id/loginBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_bg"
+        android:padding="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/txtLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp" />
+
+        <!-- Username or Email Input -->
+        <EditText
+            android:id="@+id/edtUsernameOrEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/username_or_email"
+            android:background="@drawable/input_bg"
+            android:layout_below="@id/txtLogin"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:inputType="text"
+            android:autofillHints="username"/>
+
+        <!-- Password Input -->
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:background="@drawable/input_bg"
+            android:layout_below="@id/edtUsernameOrEmail"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints="password" />
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:layout_below="@id/edtPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:backgroundTint="#FF9800"
+            android:textColor="#FFFFFF"
+            />
+
+        <!-- Forgot Password Link -->
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:textColor="#2196F3"
+            android:textSize="14sp"
+            android:layout_below="@id/btnLogin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:autoLink="none"
+            android:textStyle="normal"/>
+    </RelativeLayout>
+
+    <!-- Don't have an account block -->
+    <RelativeLayout
+        android:id="@+id/registerBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_bg"
+        android:padding="20dp"
+        android:layout_below="@+id/loginBlock"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <!-- Already Have Account Text -->
+        <TextView
+            android:id="@+id/txtNoAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/have_no_account"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"/>
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/txtNoAccount"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

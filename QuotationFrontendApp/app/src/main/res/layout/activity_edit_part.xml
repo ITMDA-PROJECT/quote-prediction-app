@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CECECE"
+    android:fillViewport="true"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/rounded_box"
+            android:elevation="3dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tvEditPartTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Edit Part"
+                android:textColor="#000000"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvQuoteNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:text="Quote Number"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <!-- Part Description -->
+            <EditText
+                android:id="@+id/etPartDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Part Description"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#808080" />
+
+            <!-- Material Code Spinner -->
+            <Spinner
+                android:id="@+id/spMaterialCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp" />
+
+            <!-- EDITABLE FIELDS -->
+            <!-- Cutting Length -->
+            <EditText
+                android:id="@+id/etCuttingLength"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Cutting Length (mm)"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#808080" />
+
+            <!-- Quantity -->
+            <EditText
+                android:id="@+id/etQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Quantity"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#808080" />
+
+            <!-- Number of Pierces -->
+            <EditText
+                android:id="@+id/etNumPierces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Number of Pierces"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#808080" />
+
+            <!-- Divider line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:background="#CCCCCC" />
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnSaveEdits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#E39600"
+                    android:text="Save Edits"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

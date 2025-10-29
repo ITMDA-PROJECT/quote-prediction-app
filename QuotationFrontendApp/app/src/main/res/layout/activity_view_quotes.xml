@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_quotes_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+
+    <!-- Title Block -->
+    <RelativeLayout
+        android:id="@+id/titleBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_bg"
+        android:padding="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="&lt;"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:background="@android:color/transparent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="0dp"/>
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Completed Quotes"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="5dp" />
+
+        <TextView
+            android:id="@+id/txtSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completed"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:layout_below="@id/txtTitle"
+            android:layout_centerHorizontal="true"
+            android:textColor="#666666"/>
+    </RelativeLayout>
+
+    <!-- "View Current" Button above the list -->
+    <Button
+        android:id="@+id/btnViewCurrent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Current"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:layout_below="@id/titleBlock"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <!-- Quotes Table Block -->
+    <RelativeLayout
+        android:id="@+id/quotesBlock"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/btnViewCurrent"
+        android:layout_above="@id/buttonBottomBlock"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded_bg"
+        android:padding="15dp">
+
+        <!-- Table Header -->
+        <LinearLayout
+            android:id="@+id/tableHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#E0E0E0"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Quote #"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="Predicted Time"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="Action"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:gravity="center"/>
+        </LinearLayout>
+        <!-- RecyclerView for quotes -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/quotesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tableHeader"
+            android:layout_marginTop="5dp"
+            android:scrollbars="vertical"/>
+
+        <!-- Empty State Message -->
+        <TextView
+            android:id="@+id/txtEmptyState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No completed quotes yet"
+            android:textSize="16sp"
+            android:textColor="#999999"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <!-- Bottom Action Buttons -->
+    <LinearLayout
+        android:id="@+id/buttonBottomBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:background="@drawable/rounded_bg"
+        android:padding="16dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnAddNewQuote"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add New Quote"
+            android:backgroundTint="#FF9800"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Logout"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

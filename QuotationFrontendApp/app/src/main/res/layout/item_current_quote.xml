@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@drawable/input_bg"
+    android:layout_marginBottom="5dp">
+
+    <TextView
+        android:id="@+id/txtQuoteNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="WXQ001"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/txtPredictedTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="5.2 days"
+        android:textSize="14sp"
+        android:gravity="center"/>
+
+</LinearLayout>
