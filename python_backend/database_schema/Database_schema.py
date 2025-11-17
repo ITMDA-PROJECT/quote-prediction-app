@@ -15,17 +15,12 @@ You can right click on the database and go to properties at the bottom if you wa
 '''
 #run once using:   python -m database_schema.Database_schema
 
-#connection_string = "mssql+pyodbc://SERVER_NAME/DATABASE_NAME?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes"
-#connection_string = "mssql+pyodbc://MATHEW-LAPTOP\\SQLEXPRESS/QuotePredictionDB?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes" #MS
-#connection_string = "mssql+pyodbc://LEVANNAH-SCAR18/tester?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes" #LK
-# DATABASE_URL=mssql+pyodbc://SKYE_LAPTOP/QuoteAppPOC?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes
-
 """ import os
 from dotenv import load_dotenv
 load_dotenv()
 connection_string = os.getenv("DATABASE_URL") """
 
-connection_string = "mssql+pyodbc://SKYE_LAPTOP/QuoteAppPOC?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes" #LK v2
+connection_string = "YOUR_CONNECTION_STRING_HERE" #Replace with your connection string
 
 engine = create_engine(connection_string) #1 Create Engine 
 Base = declarative_base() #2 Declare the Base

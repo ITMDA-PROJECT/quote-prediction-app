@@ -7,7 +7,7 @@ import xgboost as xgb
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 #Importing data
-data = pd.read_excel('C:/Users/Thevesh/Downloads/Quotes_For_ML.xlsx')
+data = pd.read_excel('your excel file path here') #Replace with your excel file path
 new_data=data
 data['orderDate'] = data['orderDate'].replace('-', pd.NA)
 

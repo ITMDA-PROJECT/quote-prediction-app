@@ -9,7 +9,7 @@ from sqlalchemy.orm import sessionmaker
 from python_backend.database_schema.Database_schema import Material, engine
 
 #Load Excel file (same folder as script)
-file_path = os.path.join(os.path.dirname(__file__), "Completed_Time.xlsx")
+file_path = os.path.join(os.path.dirname(__file__), "Your_Materials_File.xlsx") #Replace with your excel file name
 df = pd.read_excel(file_path)
 
 #Rename columns to match the Material model

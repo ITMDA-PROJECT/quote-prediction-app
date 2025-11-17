@@ -142,7 +142,7 @@ def predict(model,x):
 
 #TESTING
 if __name__ == "__main__":
-    connection_string = "C:/Users/Thevesh/Desktop/Quotes_For_ML.xlsx"
+    connection_string = "YOUR_EXCEL_FILE_PATH_HERE" #Replace with your excel file path
     model = train_model(connection_string)
     #results, importance = model_performance(model,connection_string,plot=True)
     #print("Model Performance:\n", results)

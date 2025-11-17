@@ -559,5 +559,4 @@ OR with SKIP AND LIMIT
     --eg. list_quotes(skip=10, limit=5) ==> returns quotes 11–15.
 """
 
-#LKtestadmin LKtest@gmail.com LKhashedpwd
-#LeviKits levikits@gmail.com levikits
+#==========================================================
