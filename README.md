@@ -1,13 +1,13 @@
 # 🏭 Quote Prediction App  
 
 ## 📘 Overview  
-The **Quote Prediction App** is a microservices-based system built for a manufacturing company to **optimize quote generation** using **machine learning**.  
-By analyzing historical manufacturing data, the app predicts accurate quotes and reduces manual processing time — improving both **efficiency** and **pricing accuracy**.
+The **Quote Prediction App** is a service-based Android app built for a manufacturing company to **optimize quote turnaround time estimates** using **machine learning**.  
+By analyzing historical manufacturing data, the app predicts accurate quotes and reduces manual processing time — improving both **efficiency** and **scheduling accuracy**.
 
 ---
 
 ## 🧩 Architecture  
-The system follows a **microservices architecture** with a connected Android frontend:  
+The system follows a **ervice-oriented architecture** with a connected Android frontend:  
 
 - 🧑‍💼 **User Service** – Handles user registration, authentication, and authorization.  
 - 💬 **Quote Service** – Manages quote requests, generation, and communication with the ML model.  
